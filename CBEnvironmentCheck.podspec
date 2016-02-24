@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/CleverBinder/CBEnvironmentCheck.git", :tag => s.version.to_s }
   s.platform     = :ios, '7.0'
   s.requires_arc = true
-  s.source_files = 'Pod/Classes/**/*'
+#s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Pod/Classes/*'
   s.resource_bundles = { 'CBEnvironmentCheck' => ['Pod/Assets/*.png'] }
   # s.public_header_files = 'Pod/Classes/**/*.h'
 end
