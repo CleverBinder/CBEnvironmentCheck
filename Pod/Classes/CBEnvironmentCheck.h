@@ -10,6 +10,13 @@
 
 @interface CBEnvironmentCheck : NSObject
 
-+(int)GetEnvironment;
+typedef NS_ENUM(NSInteger, CBEnvironment)
+{
+	CBEnvironmentDeveloper,
+	CBEnvironmentTestFlight,
+	CBEnvironmentAppStore
+};
+
++(CBEnvironment)GetEnvironment;
 
 @end

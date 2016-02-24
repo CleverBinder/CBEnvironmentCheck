@@ -7,7 +7,8 @@
 //
 
 @import XCTest;
-
+//#import <CBEnvironmentCheck/CBEnvironmentCheck.h>
+#import "CBEnvironmentCheck.h"
 
 @interface Tests : XCTestCase
 
@@ -29,7 +30,8 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+	XCTAssert(1==1);
+    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

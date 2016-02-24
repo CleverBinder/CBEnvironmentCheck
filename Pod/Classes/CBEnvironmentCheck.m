@@ -10,7 +10,7 @@
 
 @implementation CBEnvironmentCheck
 
-+(int)GetEnvironment
++(CBEnvironment)GetEnvironment
 {
 	NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];
 	NSData *receipt = [NSData dataWithContentsOfURL:receiptURL];
@@ -19,17 +19,17 @@
 	{
 		// There is no Reciept So it's from Developer
 		NSLog(@"📕 Development");
-		return 1;
+		return CBEnvironmentDeveloper;
 	}
 	else if ([[receiptURL lastPathComponent] isEqualToString:@"sandboxReceipt"])
 	{
 		NSLog(@"📒 TestFlight");
-		return 2;
+		return CBEnvironmentTestFlight;
 	}
 	else
 	{
 		NSLog(@"📗 App Store");
-		return 3;
+		return CBEnvironmentAppStore;
 	}
 }
 @end
